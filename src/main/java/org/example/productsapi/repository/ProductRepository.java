@@ -5,7 +5,6 @@ import org.example.productsapi.model.Product;
 import java.util.Arrays;
 import java.util.List;
 
-
 //interface that interacts with the database
 public interface ProductRepository {
 

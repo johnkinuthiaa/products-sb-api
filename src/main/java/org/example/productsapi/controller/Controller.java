@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 //this class handles requests from the client
+
 @RestController
 @RequestMapping("/api/v1/products")
 

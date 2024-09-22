@@ -7,6 +7,7 @@ import java.util.List;
 
 //interface that interacts with the database
 public interface ProductRepository {
+
     List<Product> products = Arrays.asList(
             new Product(1L,
                     "samsung",

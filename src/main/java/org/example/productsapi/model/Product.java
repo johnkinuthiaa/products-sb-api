@@ -1,19 +1,22 @@
 package org.example.productsapi.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 
 public class Product {
     @Id
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String name;
     private int quantity;
     private String description;
     private double price;
 
-    public Product(long id,String name,int quantity,String description,double price){
+    public Product(Long id,String name,int quantity,String description,double price){
         this.id =id;
         this.name =name;
         this.quantity=quantity;
@@ -22,7 +25,7 @@ public class Product {
     }
     public Product(){}
 
-    public void setId(long id){
+    public void setId(Long id){
         this.id=id;
     }
     public Long getId(){
@@ -57,10 +60,6 @@ public class Product {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
 }
